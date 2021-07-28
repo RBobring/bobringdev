@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Codystar&family=Raleway+Dots&display=swap');
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0,0,0,0.4);
+}
+
+html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}
+
+header {
+    width: 100%;
+    background-color: rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    color: var(--color-main);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    width: 100%;
+    background-color: rgba(255,255,255,0.3);
+    color: var(--color-sub);
+}
+
+button {
+    width: 100%;
+    outline: 0;
+    border: 0;
+    border-radius: 32px;
+    font-size: 16px;
+    height: 48px;
+    margin-top: 31px;
+}
+
+ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    flex: 0;
+    background-color: blue;
+    padding: 16px 20px;
+    border-right: 5px solid pink;
+}
+
+h1 {
+    margin: 0 0 2rem 0;
+}
+
+
+[data-role="content"] {
+    flex: 1;
+    display: flex;
+    min-height: calc(100%  - 80px);
+}
+
+[data-role="nav"] {
+    flex: 0 0 50px;
+    overflow: hidden;
+    background-color: #689EC6;
+    transition: all linear 0.2s;
+    padding-top: 100px;
+}
+
+[data-role="nav"] ul {
+    width: 100%;
+    min-width: fit-content;
+    cursor: pointer;
+}
+
+[data-role="nav"] ul li {
+    #white-space: nowrap;
+    padding: 15px 20px 15px 50px;
+}
+
+[data-role="nav"] ul li:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+[data-role="nav"]:hover {
+    flex: 1;
+}
+
+[data-position="auto"] {
+    border: 0;
+    width: fit-content;
+    margin: 100px auto;
+    position: relative;
+}
+
+picture.logo {
+    display: flex;
+    justify-content: center;
+    margin: 100px auto 0;
+}
+
+picture.logo img {
+    width: 125px;
+}
+
+[data-con="default"] {
+    max-width: 800px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 0 32px 32px 32px;
+    padding: 2rem;
+}
+[data-con="default"] p {
+    line-height: 24px;
+}
+
+form {
+    flex: 1;
+}
+
+form label {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 15px 0 0 0;
+    margin: 0 0 32px;
+}
+
+form label .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 12px;
+    padding: 0 0 0 3px;
+    font-weight: 300;
+    width: 100%;
+    color: #FFF;
+    letter-spacing: 2px;
+    opacity: 0;
+}
+
+form label input {
+    font-size: 16px;
+    height: 48px;
+    outline: 0;
+    border: 0;
+    width: 100%;
+    padding: 0 0 0 24px;
+    border-radius: 0 32px 32px 32px;
+    min-width: 300px;
+    background-color: rgba(255,255,255,0.3);
+    color: #FFF;
+}
+form label input::placeholder {
+    color: #BBB;
+}
+
+form label input:not(:placeholder-shown) ~ .label {
+    transition: 0.3s all ease-in-out;
+    opacity: 1;
+}
+
+form button {
+    width: 100%;
+    border: 2px solid #FFF;
+    cursor: pointer;
+    background-color: transparent;
+    text-transform: uppercase;
+    color: #FFF;
+    letter-spacing: 2px;
+    transition: all 0.2s linear;
+}
+
+form button:enabled:hover {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 300% 300%;
+    color: #000;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    } to {
+          -webkit-transform: rotate(360deg);
+      }
+}
+
+.bg-waves {
+    background: radial-gradient(1.5em 6.28571em at 1.95em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(1.5em 6.28571em at -0.45em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 1.5em 5.5em, radial-gradient(2.3em 4.57143em at 2.99em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(2.3em 4.57143em at -0.69em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 2.3em 4em, radial-gradient(3.5em 6.28571em at 4.55em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(3.5em 6.28571em at -1.05em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 3.5em 5.5em, radial-gradient(#15ffa5, #00ced1);
+    background-color: mediumspringgreen;
+    background-size: 1.5em 11em, 1.5em 11em, 2.3em 8em, 2.3em 8em, 3.5em 11em, 3.5em 11em, 100% 100%;
+    background-repeat: repeat;
+}
+
+[data-box="error"] {
+    display: none;
+    padding: 9px 8px 8px;
+    font-size: 14px;
+    border-bottom: 3px solid red;
+    text-align: center;
+}
+
+form label [data-box="error"] {
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 0 24px 32px 32px;
+
+    padding: 0;
+    border: 0;
+    transition: all 0.2s linear;
+}
+
+form label [data-box="error"].active {
+    padding: 64px 16px 16px;
+    max-height: 300px;
+    margin-top: -48px;
+    #border-bottom: 2px solid red;
+    transition: all 0.2s ease-in-out;
+}
+
+form label [data-info][data-mode="0"]:before {
+    color: rgba(255,0,0,1);
+}
+
+form label [data-info][data-mode="1"]:before {
+    color: rgba(255,100,0,0.5);
+}
+
+form label [data-info][data-mode="2"]:before  {
+    color: rgba(255,255,0,0.5);
+}
+
+form label [data-info][data-mode="3"]:before {
+    color: rgba(100,255,0,0.5);
+}
+
+form label [data-info][data-mode="4"]:before {
+    color: #74B119;
+}
+
+[data-info] {
+    position: relative;
+    cursor: pointer;
+}
+
+[data-info]:before {
+    font-family: "Font Awesome 5 Free", sans-serif;
+    font-weight: 900;
+    content: "\f128";
+    position: absolute;
+    padding: 13px 14px;
+    font-size: 22px;
+    color: #A0A0A0;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 48px;
+    transition: all 0.2s linear;
+}
+
+[data-info]:hover:before {
+    color: #F0F0F0;
+    transition: all 0.2s linear;
+}
+
+[data-info].true:before {
+    content: "\f00c";
+    color: #74B119;
+}
+
+[data-info].false:before {
+    content: "\f12a";
+    color: #FB4100;
+}
+
+[data-info]:hover:after {
+    z-index: 999;
+    position: absolute;
+    border-radius: 16px 0 16px 16px;
+    content: attr(data-info);
+    width: calc(100% - 28px);
+    top: calc(100% - 15px);
+    left: 0;
+    background-color: #FFF;
+    font-size: 12px;
+    padding: 16px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+    transition: all 0.2s linear;
+}
+
+[data-role='note'] {
+    display: none;
+}
+
+[data-role='note'].active {
+    display: block;
+}

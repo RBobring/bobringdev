@@ -1,0 +1,29 @@
+[data-icon] {
+    position: relative;
+    padding: 0 0 0 50px;
+}
+
+[data-icon]::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    width: 50px;
+    text-align: center;
+    padding: 15px 0;
+}
+
+[data-icon="home"]:before {
+    content: '\f015';
+}
+
+[data-icon="sign"]:before {
+    content: '\f142';
+}

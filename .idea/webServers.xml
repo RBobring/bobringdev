@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0811ee72-93c0-4e4e-8f65-19a08863eb69" name="webtropia - bobring.dev" url="http://78.31.65.107">
+        <fileTransfer rootFolder="/srv/bobring.dev" accessType="SFTP" host="78.31.65.107" port="22" sshConfigId="08f3e790-3ddc-44a5-9cb9-9f198c264360" sshConfig="root@78.31.65.107:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,129 @@
+@import "/kernel/libs/css/base.css";
+
+:root {
+    --data-position: 1;
+}
+
+@keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    } to {
+          -webkit-transform: rotate(360deg);
+      }
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Roboto';
+    background-color: #EEE;
+    -ms-overflow-style: none;  // IE 10+
+    overflow: -moz-scrollbars-none;  // Firefox
+}
+
+header {
+    width: 100%;
+    height: 0;
+}
+
+header ul {
+    right: 10px;
+    position: relative;
+    padding: 0 10px 0 0;
+    #display: flex;
+    #flex-direction: row-reverse;
+}
+
+header ul li {
+    position: absolute;
+    top: 0;
+    #flex: 0 0 50px;
+    height: 50px;
+    width: 50px;
+    margin: 10px 0;
+    border-radius: 50px;
+    background-color: #AAA;
+}
+
+header ul li[data-position] {
+    right: calc(60px * var(--data-position));
+}
+
+main {
+    height: 100%;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[data-role="homepage"] {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    #padding: 0 100px;
+}
+
+[data-logo] {
+
+}
+
+[data-logo="homepage"] {
+    flex: 0;
+    max-width: 100px;
+    height: auto;
+    #animation: spin;
+    #animation-name: spin;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+[data-logo="homepage"]:hover {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+[data-page] img {
+    width: 100%;
+    height: auto;
+}
+
+[data-page="welcome"] {
+    background-image: url("../img/Hintergrund1.jpg");
+    background-size: cover;
+}
+
+footer {
+
+}
+
+aside {
+    /*
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 400px;
+    background-color: red;
+     */
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

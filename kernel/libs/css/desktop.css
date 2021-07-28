@@ -1,0 +1,15 @@
+body {
+    background-color: red;
+}
+
+header {
+    flex: 0 0 80px;
+}
+
+main {
+    flex: 4;
+}
+
+footer {
+    flex: 0 0 100px;
+}

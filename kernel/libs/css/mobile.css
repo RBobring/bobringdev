@@ -1,0 +1,86 @@
+@import "base.css";
+@import "button.css";
+
+:root {
+    --data-position: 1;
+    --color-main: #426474;
+    --color-sub: #AED4E6;
+    --color-alternative: #92D792;
+}
+
+html {
+
+}
+
+body {
+
+}
+
+header {
+    flex: 0 0 60px;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    flex: 0 0 50px;
+}
+
+section {
+
+}
+
+[data-role="homepage"] {
+
+    #padding: 0 100px;
+}
+
+[data-logo] {
+
+}
+
+[data-logo="homepage"] {
+    flex: 0;
+    max-width: 100px;
+    height: auto;
+    #animation: spin;
+    #animation-name: spin;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+[data-logo="homepage"]:hover {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+[data-page] img {
+    width: 100%;
+    height: auto;
+}
+
+[data-page="welcome"] {
+    background-image: url("../img/Hintergrund1.jpg");
+    background-size: cover;
+}
+
+
+
+aside {
+    /*
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 400px;
+    background-color: red;
+     */
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
