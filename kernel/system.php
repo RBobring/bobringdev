@@ -254,14 +254,6 @@ class System extends xSql
 
         $mail = new PHPMailer();
         $mail->IsSMTP();
-        $mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
-        $mail->SMTPAuth = true;
-        $mail->SMTPSecure = 'ssl';
-        $mail->Host = "smtps.udag.de";
-        $mail->Port = 465; // or 587
-        $mail->IsHTML(true);
-        $mail->Username = "bobring-dev-0001";
-        $mail->Password = "9dBzBQW3WEp57Sq!!23";
         $mail->SetFrom("mail@bobring.dev", "Bobring Development");
         $mail->Subject = $sub;
         $mail->Body = $ctn;
